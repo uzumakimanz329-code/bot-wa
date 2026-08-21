@@ -1,4 +1,4 @@
-const BOT_API_URL = 'https://large-donkeys-warn.loca.lt';
+const BOT_API_URL = 'https://zoning-warned-von-stopping.trycloudflare.com';
 
 const phoneInput = document.getElementById('phoneNumber');
 const connectButton = document.getElementById('connectButton');
