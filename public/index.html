@@ -1,369 +1,563 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>MANZ BOT</title>
-    <meta name="description" content="MANZ BOT - WhatsApp Bot Multi Feature">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css?v=3">
 </head>
 
 <body>
 
-    <!-- Background -->
-    <div class="bg-glow glow-1"></div>
-    <div class="bg-glow glow-2"></div>
+<div class="bg-glow glow-1"></div>
+<div class="bg-glow glow-2"></div>
 
-    <main class="container">
+<main class="container">
 
-        <!-- Header -->
-        <header class="hero">
-            <div class="bot-icon">🤖</div>
+    <!-- HEADER -->
 
-            <div class="hero-content">
-                <div class="title-row">
-                    <h1>MANZ BOT</h1>
-                    <span class="version">BOT</span>
+    <header class="hero">
+
+        <div class="bot-icon">🤖</div>
+
+        <div class="hero-content">
+
+            <div class="title-row">
+                <h1>MANZ BOT</h1>
+                <span class="version">BOT</span>
+            </div>
+
+            <p>WhatsApp Bot Multi Feature</p>
+
+        </div>
+
+    </header>
+
+
+    <!-- STATUS -->
+
+    <section class="status-card">
+
+        <div class="status-left">
+
+            <span class="status-dot"></span>
+
+            <div>
+                <strong>MANZ BOT</strong>
+                <small>System Status</small>
+            </div>
+
+        </div>
+
+        <span class="status-online">ONLINE</span>
+
+    </section>
+
+
+    <!-- CONNECT WHATSAPP -->
+
+    <section class="connect-card">
+
+        <div class="connect-icon">📱</div>
+
+        <div class="connect-content">
+
+            <span class="eyebrow">WHATSAPP CONNECTION</span>
+
+            <h2>Connect WhatsApp</h2>
+
+            <p>
+                Masukkan nomor WhatsApp untuk mendapatkan
+                pairing code dan menghubungkan bot.
+            </p>
+
+            <div class="connect-form">
+
+                <input
+                    type="tel"
+                    id="phoneNumber"
+                    placeholder="628xxxxxxxxxx"
+                    autocomplete="tel"
+                    inputmode="numeric"
+                >
+
+                <button
+                    type="button"
+                    id="connectButton"
+                    class="connect-button"
+                >
+                    Connect
+                </button>
+
+            </div>
+
+            <div id="connectStatus" class="connect-status" hidden></div>
+
+            <div id="pairingBox" class="pairing-box" hidden>
+
+                <span class="pairing-label">
+                    PAIRING CODE
+                </span>
+
+                <strong id="pairingCode" class="pairing-code">
+                    --------
+                </strong>
+
+                <small>
+                    Buka WhatsApp → Perangkat tertaut →
+                    Tautkan dengan nomor telepon,
+                    lalu masukkan kode di atas.
+                </small>
+
+                <button
+                    type="button"
+                    id="copyPairing"
+                    class="copy-pairing"
+                >
+                    📋 Salin Pairing Code
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WELCOME -->
+
+    <section class="welcome">
+
+        <span class="eyebrow">WELCOME</span>
+
+        <h2>
+            Semua fitur MANZ BOT<br>
+            dalam satu tempat.
+        </h2>
+
+        <p>
+            Jelajahi command dan fitur yang tersedia.
+            Beberapa fitur masih dalam tahap pengembangan.
+        </p>
+
+    </section>
+
+
+    <!-- SEARCH -->
+
+    <section class="search-box">
+
+        <span class="search-icon">⌕</span>
+
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Cari fitur atau command..."
+            autocomplete="off"
+        >
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="categories">
+
+        <button type="button" class="category active">
+            Semua
+        </button>
+
+        <button type="button" class="category">
+            Owner
+        </button>
+
+        <button type="button" class="category">
+            Group
+        </button>
+
+        <button type="button" class="category">
+            AI
+        </button>
+
+        <button type="button" class="category">
+            Tools
+        </button>
+
+        <button type="button" class="category">
+            Games
+        </button>
+
+    </section>
+
+
+    <!-- FEATURE HEADING -->
+
+    <section class="section-heading">
+
+        <div>
+            <span class="eyebrow">FEATURES</span>
+            <h2>Fitur Bot</h2>
+        </div>
+
+        <span class="feature-count">
+            12+ fitur
+        </span>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <article class="feature-card">
+
+            <div class="feature-icon">👑</div>
+
+            <div class="feature-info">
+
+                <div class="feature-title">
+                    <h3>Owner</h3>
+                    <span class="available">READY</span>
+                </div>
+
+                <p>Command khusus untuk pemilik bot.</p>
+                <code>.owner</code>
+
+            </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <div class="feature-icon">👥</div>
+
+            <div class="feature-info">
+
+                <div class="feature-title">
+                    <h3>Group</h3>
+                    <span class="available">READY</span>
                 </div>
 
                 <p>
-                    WhatsApp Bot Multi Feature
+                    Berbagai tools untuk mengelola grup WhatsApp.
                 </p>
+
+                <code>.group</code>
+
             </div>
-        </header>
+
+        </article>
 
 
-        <!-- Status -->
-        <section class="status-card">
-            <div class="status-left">
-                <span class="status-dot"></span>
+        <article class="feature-card">
 
-                <div>
-                    <strong>MANZ BOT</strong>
-                    <small>System Status</small>
+            <div class="feature-icon">🤖</div>
+
+            <div class="feature-info">
+
+                <div class="feature-title">
+                    <h3>AI</h3>
+                    <span class="available">READY</span>
                 </div>
+
+                <p>
+                    Fitur AI untuk membantu menjawab berbagai pertanyaan.
+                </p>
+
+                <code>.ai</code>
+
             </div>
 
-            <span class="status-online">ONLINE</span>
-        </section>
+        </article>
 
 
-        <!-- Welcome -->
-        <section class="welcome">
-            <span class="eyebrow">WELCOME</span>
+        <article class="feature-card">
 
-            <h2>Semua fitur MANZ BOT<br>
-                dalam satu tempat.</h2>
+            <div class="feature-icon">🛠️</div>
+
+            <div class="feature-info">
+
+                <div class="feature-title">
+                    <h3>Tools</h3>
+                    <span class="available">READY</span>
+                </div>
+
+                <p>
+                    Kumpulan tools praktis untuk kebutuhan sehari-hari.
+                </p>
+
+                <code>.tools</code>
+
+            </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <div class="feature-icon">🎨</div>
+
+            <div class="feature-info">
+
+                <div class="feature-title">
+                    <h3>Maker</h3>
+                    <span class="soon">SOON</span>
+                </div>
+
+                <p>
+                    Buat berbagai konten dan media dengan bot.
+                </p>
+
+                <code>.maker</code>
+
+            </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <div class="feature-icon">🎮</div>
+
+            <div class="feature-info">
+
+                <div class="feature-title">
+                    <h3>Games</h3>
+                    <span class="soon">SOON</span>
+                </div>
+
+                <p>
+                    Mainkan berbagai game langsung melalui WhatsApp.
+                </p>
+
+                <code>.games</code>
+
+            </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <div class="feature-icon">🎵</div>
+
+            <div class="feature-info">
+
+                <div class="feature-title">
+                    <h3>Music</h3>
+                    <span class="soon">SOON</span>
+                </div>
+
+                <p>
+                    Cari dan nikmati musik melalui bot.
+                </p>
+
+                <code>.play</code>
+
+            </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <div class="feature-icon">📥</div>
+
+            <div class="feature-info">
+
+                <div class="feature-title">
+                    <h3>Downloader</h3>
+                    <span class="soon">SOON</span>
+                </div>
+
+                <p>
+                    Download media dari berbagai platform.
+                </p>
+
+                <code>.download</code>
+
+            </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <div class="feature-icon">🔎</div>
+
+            <div class="feature-info">
+
+                <div class="feature-title">
+                    <h3>Search</h3>
+                    <span class="soon">SOON</span>
+                </div>
+
+                <p>
+                    Cari informasi dan konten dari internet.
+                </p>
+
+                <code>.search</code>
+
+            </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <div class="feature-icon">🎭</div>
+
+            <div class="feature-info">
+
+                <div class="feature-title">
+                    <h3>Sticker</h3>
+                    <span class="soon">SOON</span>
+                </div>
+
+                <p>
+                    Ubah gambar atau video menjadi sticker.
+                </p>
+
+                <code>.sticker</code>
+
+            </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <div class="feature-icon">💰</div>
+
+            <div class="feature-info">
+
+                <div class="feature-title">
+                    <h3>Economy</h3>
+                    <span class="soon">SOON</span>
+                </div>
+
+                <p>
+                    Sistem ekonomi dan saldo virtual dalam bot.
+                </p>
+
+                <code>.balance</code>
+
+            </div>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <div class="feature-icon">⚔️</div>
+
+            <div class="feature-info">
+
+                <div class="feature-title">
+                    <h3>RPG</h3>
+                    <span class="soon">SOON</span>
+                </div>
+
+                <p>
+                    Petualangan RPG dan sistem karakter.
+                </p>
+
+                <code>.rpg</code>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta-card">
+
+        <div class="cta-icon">💬</div>
+
+        <div class="cta-content">
+
+            <span class="eyebrow">WHATSAPP</span>
+
+            <h2>Gunakan MANZ BOT</h2>
 
             <p>
-                Jelajahi command dan fitur yang tersedia.
-                Beberapa fitur masih dalam tahap pengembangan.
+                Buka WhatsApp dan mulai menggunakan bot.
             </p>
-        </section>
 
-
-        <!-- Search -->
-        <section class="search-box">
-            <span class="search-icon">⌕</span>
-
-            <input
-                type="search"
-                id="searchInput"
-                placeholder="Cari fitur atau command..."
-                autocomplete="off"
+            <a
+                class="whatsapp-button"
+                href="https://wa.me/6282219477069"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-        </section>
+                💬 Buka WhatsApp
+            </a>
 
+        </div>
 
-        <!-- Categories -->
-        <section class="categories">
-            <button class="category active">Semua</button>
-            <button class="category">Owner</button>
-            <button class="category">Group</button>
-            <button class="category">AI</button>
-            <button class="category">Tools</button>
-            <button class="category">Games</button>
-        </section>
+    </section>
 
 
-        <!-- Features -->
-        <section class="section-heading">
-            <div>
-                <span class="eyebrow">FEATURES</span>
-                <h2>Fitur Bot</h2>
-            </div>
+    <!-- CHANNEL -->
 
-            <span class="feature-count">12+ fitur</span>
-        </section>
+    <section class="channel-card">
 
+        <div class="channel-icon">📢</div>
 
-        <section class="features">
+        <div>
 
-            <!-- Feature -->
-            <article class="feature-card">
-                <div class="feature-icon">👑</div>
+            <span class="eyebrow">
+                OFFICIAL CHANNEL
+            </span>
 
-                <div class="feature-info">
-                    <div class="feature-title">
-                        <h3>Owner</h3>
-                        <span class="available">READY</span>
-                    </div>
-
-                    <p>Command khusus untuk pemilik bot.</p>
-
-                    <code>.owner</code>
-                </div>
-            </article>
-
-
-            <article class="feature-card">
-                <div class="feature-icon">👥</div>
-
-                <div class="feature-info">
-                    <div class="feature-title">
-                        <h3>Group</h3>
-                        <span class="available">READY</span>
-                    </div>
-
-                    <p>Berbagai tools untuk mengelola grup WhatsApp.</p>
-
-                    <code>.group</code>
-                </div>
-            </article>
-
-
-            <article class="feature-card">
-                <div class="feature-icon">🤖</div>
-
-                <div class="feature-info">
-                    <div class="feature-title">
-                        <h3>AI</h3>
-                        <span class="available">READY</span>
-                    </div>
-
-                    <p>Fitur AI untuk membantu menjawab berbagai pertanyaan.</p>
-
-                    <code>.ai</code>
-                </div>
-            </article>
-
-
-            <article class="feature-card">
-                <div class="feature-icon">🛠️</div>
-
-                <div class="feature-info">
-                    <div class="feature-title">
-                        <h3>Tools</h3>
-                        <span class="available">READY</span>
-                    </div>
-
-                    <p>Kumpulan tools praktis untuk kebutuhan sehari-hari.</p>
-
-                    <code>.tools</code>
-                </div>
-            </article>
-
-
-            <article class="feature-card">
-                <div class="feature-icon">🎨</div>
-
-                <div class="feature-info">
-                    <div class="feature-title">
-                        <h3>Maker</h3>
-                        <span class="soon">SOON</span>
-                    </div>
-
-                    <p>Buat berbagai konten dan media dengan bot.</p>
-
-                    <code>.maker</code>
-                </div>
-            </article>
-
-
-            <article class="feature-card">
-                <div class="feature-icon">🎮</div>
-
-                <div class="feature-info">
-                    <div class="feature-title">
-                        <h3>Games</h3>
-                        <span class="soon">SOON</span>
-                    </div>
-
-                    <p>Mainkan berbagai game langsung melalui WhatsApp.</p>
-
-                    <code>.games</code>
-                </div>
-            </article>
-
-
-            <article class="feature-card">
-                <div class="feature-icon">🎵</div>
-
-                <div class="feature-info">
-                    <div class="feature-title">
-                        <h3>Music</h3>
-                        <span class="soon">SOON</span>
-                    </div>
-
-                    <p>Cari dan nikmati musik melalui bot.</p>
-
-                    <code>.play</code>
-                </div>
-            </article>
-
-
-            <article class="feature-card">
-                <div class="feature-icon">📥</div>
-
-                <div class="feature-info">
-                    <div class="feature-title">
-                        <h3>Downloader</h3>
-                        <span class="soon">SOON</span>
-                    </div>
-
-                    <p>Download media dari berbagai platform.</p>
-
-                    <code>.download</code>
-                </div>
-            </article>
-
-
-            <article class="feature-card">
-                <div class="feature-icon">🔎</div>
-
-                <div class="feature-info">
-                    <div class="feature-title">
-                        <h3>Search</h3>
-                        <span class="soon">SOON</span>
-                    </div>
-
-                    <p>Cari informasi dan konten dari internet.</p>
-
-                    <code>.search</code>
-                </div>
-            </article>
-
-
-            <article class="feature-card">
-                <div class="feature-icon">🎭</div>
-
-                <div class="feature-info">
-                    <div class="feature-title">
-                        <h3>Sticker</h3>
-                        <span class="soon">SOON</span>
-                    </div>
-
-                    <p>Ubah gambar atau video menjadi sticker.</p>
-
-                    <code>.sticker</code>
-                </div>
-            </article>
-
-
-            <article class="feature-card">
-                <div class="feature-icon">💰</div>
-
-                <div class="feature-info">
-                    <div class="feature-title">
-                        <h3>Economy</h3>
-                        <span class="soon">SOON</span>
-                    </div>
-
-                    <p>Sistem ekonomi dan saldo virtual dalam bot.</p>
-
-                    <code>.balance</code>
-                </div>
-            </article>
-
-
-            <article class="feature-card">
-                <div class="feature-icon">⚔️</div>
-
-                <div class="feature-info">
-                    <div class="feature-title">
-                        <h3>RPG</h3>
-                        <span class="soon">SOON</span>
-                    </div>
-
-                    <p>Petualangan RPG dan sistem karakter.</p>
-
-                    <code>.rpg</code>
-                </div>
-            </article>
-
-        </section>
-
-
-        <!-- CTA -->
-        <section class="cta-card">
-
-            <div class="cta-icon">💬</div>
-
-            <div class="cta-content">
-                <span class="eyebrow">WHATSAPP</span>
-
-                <h2>Gunakan MANZ BOT</h2>
-
-                <p>
-                    Buka WhatsApp dan mulai menggunakan bot.
-                </p>
-
-                <a
-                    class="whatsapp-button"
-                    href="https://wa.me/6282219477069"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <span>💬</span>
-                    Buka WhatsApp
-                </a>
-            </div>
-
-        </section>
-
-
-        <!-- Channel -->
-        <section class="channel-card">
-
-            <div class="channel-icon">📢</div>
-
-            <div>
-                <span class="eyebrow">OFFICIAL CHANNEL</span>
-
-                <h2>MANZ BOT</h2>
-
-                <p>
-                    Dapatkan update fitur dan informasi terbaru.
-                </p>
-
-                <a
-                    href="https://whatsapp.com/channel/0029VbDUcLpFi8xmBQ1Od131"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Ikuti Channel →
-                </a>
-            </div>
-
-        </section>
-
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer-logo">MANZ BOT</div>
+            <h2>MANZ BOT</h2>
 
             <p>
-                Built with ❤️ by Manz
+                Dapatkan update fitur dan informasi terbaru.
             </p>
 
-            <span>
-                © 2026 MANZ BOT. All rights reserved.
-            </span>
-        </footer>
+            <a
+                href="https://whatsapp.com/channel/0029VbDUcLpFi8xmBQ1Od131"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Ikuti Channel →
+            </a>
 
-    </main>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            MANZ BOT
+        </div>
+
+        <p>
+            Built with ❤️ by Manz
+        </p>
+
+        <span>
+            © 2026 MANZ BOT. All rights reserved.
+        </span>
+
+    </footer>
+
+</main>
+
+<script src="./script.js?v=1"></script>
 
 </body>
 </html>
